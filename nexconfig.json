@@ -1,0 +1,51 @@
+{
+    "name": "express-basic",
+    "version": "1.0.0",
+    "description": "A simple ExpressJS API project MVC project.",
+    "keywords": [
+        "express",
+        "nex",
+        "backend",
+        "api"
+    ],
+    "files": [
+        "src",
+        "server.ts",
+        "README.md",
+        "package.json",
+        "tsconfig.json",
+        ".env.example"
+    ],
+    "scripts": {
+        "dev": "bun --watch server.ts",
+        "start": "bun server.ts",
+        "build": "tsc"
+    },
+    "setup": {
+        "scripts": [
+            "bun install"
+        ],
+        "files": {
+            "src": {
+                "app.ts": "src",
+                "config": {
+                    "env.ts": "src/config"
+                },
+                "controllers": {
+                    "health.controller.ts": "src/controllers"
+                },
+                "middlewares": {
+                    "error.middleware.ts": "src/middlewares"
+                },
+                "routes": {
+                    "health.routes.ts": "src/routes",
+                    "index.ts": "src/routes"
+                }
+            },
+            "server.ts": ".",
+            "package.json": ".",
+            "README.md": ".",
+            ".env.example": "."
+        }
+    }
+}
